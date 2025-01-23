@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  project: ZmVhdHVyZS1wcmV2aWV3cw==
+  type: Z2l0
+  url: aHR0cHM6Ly9naXRodWIuY29tL21pa29ncy9mZWF0dXJlLXByZXZpZXctZXhhbXBsZS1hcmdvY2QuZ2l0
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: repo-2712966645
+  namespace: argocd
+type: Opaque
