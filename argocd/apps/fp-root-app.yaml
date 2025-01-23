@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fp-root-app
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: PruneLast=true
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: feature-previews
+  source:
+    path: feature-previews/
+    repoURL: https://github.com/mikogs/feature-previews-example-argocd.git
+    targetRevision: add-initial-application
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
