@@ -11,7 +11,7 @@ spec:
   source:
     path: feature-previews/
     repoURL: https://github.com/mikogs/feature-preview-example-argocd.git
-    targetRevision: add-initial-application
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
