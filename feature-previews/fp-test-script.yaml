@@ -13,7 +13,7 @@ spec:
   source:
     path: feature-previews/fp-test-script/
     repoURL: https://github.com/mikogs/feature-preview-example-argocd.git
-    targetRevision: main
+    targetRevision: add-initial-application
   syncPolicy:
     automated:
       prune: true
