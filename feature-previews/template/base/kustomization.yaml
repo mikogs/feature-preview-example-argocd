@@ -11,4 +11,3 @@ images:
   - name: fp-app-image-placeholder
     newName: '__IMAGE_WITHOUT_TAG__'
     newTag: '__IMAGE_TAG__'
-  

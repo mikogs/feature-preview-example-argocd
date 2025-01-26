@@ -11,4 +11,3 @@ images:
   - name: fp-app-image-placeholder
     newName: 'mikogs/feature-preview-app'
     newTag: 'bae0623'
-  
