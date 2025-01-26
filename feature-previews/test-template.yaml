@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: __APP_NAME__
+  name: fp-test-template
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-options: PruneLast=true
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: __APP_NAME__
+    namespace: fp-test-template
   project: feature-previews
   source:
-    path: feature-previews/__APP_NAME__/
+    path: feature-previews/fp-test-template/
     repoURL: https://github.com/mikogs/feature-preview-example-argocd.git
     targetRevision: main
   syncPolicy:
