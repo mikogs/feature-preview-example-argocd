@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fp-test1
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-options: PruneLast=true
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: fp-test1
+  project: feature-previews
+  source:
+    path: feature-previews/fp-test1/
+    repoURL: https://github.com/mikogs/feature-preview-example-argocd.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true

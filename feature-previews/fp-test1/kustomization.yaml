@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ns.yaml
+  - deployment.yaml
+  - service.yaml
+  # - ingress.yaml
+
+images:
+  - name: fp-app-image-placeholder
+    newName: 'mikogs/feature-preview-app'
+    newTag: 'b57c0d5'
