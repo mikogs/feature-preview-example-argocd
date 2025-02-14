@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fp-app
+  namespace: fp-test3
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: fp-app
+  template:
+    metadata:
+      labels:
+        app: fp-app
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: fp-app
+        image: fp-app-image-placeholder
+        imagePullPolicy: "Always"
+        ports:
+        - name: web
+          containerPort: 8080
